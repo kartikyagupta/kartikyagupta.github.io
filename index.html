@@ -3,46 +3,71 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kartikya Gupta</title>
+    <title>Your Name</title>
     <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css?family=Tahoma" rel="stylesheet">
 </head>
 <body>
     <header>
-        <h1>Kartikya Gupta</h1>
-        <nav>
-            <ul>
-                <li><a href="#profile">Profile</a></li>
-                <li><a href="#links">Links</a></li>
-                <li><a href="#resume">Resume</a></li>
-            </ul>
-        </nav>
+        <div class="profile-info">
+            <img src="profile.jpg" alt="Profile Picture">
+            <h1>Your Name</h1>
+            <p>Position, Organization</p>
+            <p>Email: your@email.com</p>
+            <div class="socials">
+                <a href="#" target="_blank">Social Link 1</a>
+                <a href="#" target="_blank">Social Link 2</a>
+                <!-- Add more social links as needed -->
+            </div>
+        </div>
     </header>
 
     <main>
-        <section id="profile">
-            <img src="profile.jpg" alt="Profile Picture">
+        <section id="about-me">
             <h2>About Me</h2>
-            <p>I am a Computer Science Engineering student at BITS Pilani, with a passion for Machine Learning, Computer Vision, and Deep Learning.</p>
+            <p>Your <span class="highlight">about</span> me <span class="highlight">section</span> content goes here.</p>
         </section>
 
-        <section id="links">
-            <h2>Connect with Me</h2>
-            <ul>
-                <li><a href="https://www.linkedin.com/in/kartikya-gupta-b8b392200/" target="_blank">LinkedIn</a></li>
-                <li><a href="https://github.com/gkartikya5" target="_blank">GitHub</a></li>
-                <li><a href="https://leetcode.com/gkartikya5/" target="_blank">LeetCode</a></li>
-                <li><a href="https://codeforces.com/profile/gkartikya5" target="_blank">Codeforces</a></li>
-            </ul>
+        <section id="education">
+            <h2>Education</h2>
+            <!-- Add your education details here -->
         </section>
 
-        <section id="resume">
-            <h2>Resume</h2>
-            <embed src="resume.pdf" type="application/pdf" width="100%" height="600px" />
+        <section id="experience">
+            <h2>Experience</h2>
+            <!-- Add your experience details here -->
+        </section>
+
+        <section id="projects">
+            <h2>Projects</h2>
+            <!-- Add your project details here -->
+        </section>
+
+        <section id="skills">
+            <h2>Skills</h2>
+            <!-- Add your skills here -->
+        </section>
+
+        <section id="contact-me">
+            <h2>Contact Me</h2>
+            <form id="contact-form">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" required></textarea>
+
+                <button type="submit">Submit</button>
+            </form>
+            <p id="form-message"></p>
         </section>
     </main>
 
     <footer>
-        <p>&copy; Kartikya Gupta</p>
+        <p>&copy; Your Name</p>
     </footer>
 
     <script src="script.js"></script>
