@@ -38,3 +38,19 @@ window.addEventListener('scroll', function() {
         }
     });
 });
+
+// Resume Request Form
+const resumeForm = document.getElementById('resume-form');
+const formMessage = document.getElementById('form-message');
+
+resumeForm.addEventListener('submit', function(e) {
+    e.preventDefault();
+
+    const name = document.getElementById('name').value;
+    const email = document.getElementById('email').value;
+
+    // You can add logic here to send the form data to a server or handle it as needed
+    // For now, we'll just display a success message
+    formMessage.textContent = `Thank you, ${name}! Your resume request has been submitted.`;
+    resumeForm.reset();
+});
