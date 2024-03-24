@@ -87,14 +87,20 @@ h2 {
 
 .education-details, .experience-details {
     flex-grow: 1;
-    display: flex; /* Add flex display */
-/*     justify-content: space-between; /* Align items to the start and end of the container */ */
-    align-items: left; /* Align items vertically */
+    display: flex;
+    flex-direction: column; /* Change to column layout */
+    align-items: flex-start; /* Align items to the start */
+}
+
+.education-details > div, .experience-details > div {
+    display: flex;
+    align-items: center;
 }
 
 .year {
     margin-left: 10px;
-    text-align: right; /* Align year to the right */
+    text-align: right;
+    flex-shrink: 0; /* Prevent year from wrapping */
 }
 
 /* Form styles */
