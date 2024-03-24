@@ -49,8 +49,11 @@ resumeForm.addEventListener('submit', function(e) {
     const name = document.getElementById('name').value;
     const email = document.getElementById('email').value;
 
-    // You can add logic here to send the form data to a server or handle it as needed
-    // For now, we'll just display a success message
-    formMessage.textContent = `Thank you, ${name}! Your resume request has been submitted.`;
+    // Send form data to your email
+    const formData = `Name: ${name}\nEmail: ${email}`;
+    const mailtoLink = `mailto:your-email@example.com?subject=Resume Request&body=${encodeURIComponent(formData)}`;
+    window.open(mailtoLink);
+
+    formMessage.textContent = `Thank you, ${name}! Your resume request has been sent.`;
     resumeForm.reset();
 });
