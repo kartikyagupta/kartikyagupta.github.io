@@ -1,36 +1,33 @@
 body {
     font-family: 'Tahoma', sans-serif;
-    background-color: #f9f9f9;
-    color: #333;
+    background-color: #ffffff;
+    color: #000000;
     margin: 0;
     padding: 0;
 }
 
 header {
-    background-color: #fff;
+    background-color: #f2f2f2;
     padding: 20px;
     text-align: center;
 }
 
 .profile-info {
-    display: flex;
-    align-items: center;
+    display: inline-block;
+    text-align: left;
 }
 
 .profile-info img {
     width: 150px;
     height: 150px;
-    border-radius: 10px;
-    margin-right: 20px;
+    border-radius: 50%;
+    border: 2px solid #000000;
     object-fit: cover;
 }
 
-.personal-info {
-    text-align: left;
-}
-
 .profile-info h1 {
-    margin: 0;
+    margin-top: 10px;
+    margin-bottom: 5px;
 }
 
 .profile-info p {
@@ -54,30 +51,17 @@ section {
 }
 
 h2 {
-    color: #333;
+    color: #000000;
 }
 
 .highlight {
     color: #ff0000;
 }
 
-education-info img {
-    width: 100px;
-    height: 100px;
-    margin-right: 20px;
-}
-
-footer {
-    background-color: #fff;
-    padding: 20px;
-    text-align: center;
-}
-
 form {
     display: flex;
     flex-direction: column;
     max-width: 400px;
-    margin: 0 auto;
 }
 
 label {
@@ -86,7 +70,7 @@ label {
 
 input, textarea {
     margin-top: 5px;
-    padding: 10px;
+    padding: 5px;
     border: 1px solid #ccc;
     border-radius: 4px;
 }
@@ -104,4 +88,10 @@ button {
 #form-message {
     margin-top: 10px;
     font-weight: bold;
+}
+
+footer {
+    background-color: #f2f2f2;
+    padding: 20px;
+    text-align: center;
 }
