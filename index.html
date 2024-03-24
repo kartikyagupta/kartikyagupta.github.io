@@ -4,54 +4,120 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kartikya Gupta</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
-        <h1>Kartikya Gupta</h1>
         <nav>
+            <div class="logo">
+                <a href="#">Kartikya Gupta</a>
+            </div>
             <ul>
                 <li><a href="#profile">Profile</a></li>
-                <li><a href="#links">Links</a></li>
+                <li><a href="#education">Education</a></li>
+                <li><a href="#experience">Experience</a></li>
                 <li><a href="#projects">Projects</a></li>
+                <li><a href="#links">Links</a></li>
                 <li><a href="#resume-request">Request Resume</a></li>
             </ul>
         </nav>
     </header>
 
     <main>
-        <section id="profile">
-            <img src="profile.jpg" alt="Profile Picture">
-            <h2>About Me</h2>
-            <p>I am a Computer Science Engineering student at BITS Pilani, with a passion for Machine Learning, Computer Vision, and Deep Learning.</p>
+        <section id="profile" class="hero">
+            <div class="hero-content">
+                <img src="profile.jpg" alt="Profile Picture">
+                <h1>Kartikya Gupta</h1>
+                <p>Computer Science Engineering Student at BITS Pilani</p>
+            </div>
         </section>
 
-        <section id="links">
-            <h2>Connect with Me</h2>
-            <ul>
-                <li><a href="https://www.linkedin.com/in/kartikyagupta" target="_blank">LinkedIn</a></li>
-                <li><a href="https://github.com/kartikyagupta" target="_blank">GitHub</a></li>
-                <li><a href="https://leetcode.com/kartikyagupta/" target="_blank">LeetCode</a></li>
-                <li><a href="https://codeforces.com/profile/kartikyagupta" target="_blank">Codeforces</a></li>
+        <section id="education" class="section">
+            <h2 class="section-title">Education</h2>
+            <div class="education-item">
+                <h3>B.E. (Hons.) Computer Science Engineering</h3>
+                <p>Birla Institute Of Technology & Science, Pilani</p>
+                <p>CGPA: 7.20/10.00</p>
+                <p>2020 - 2024</p>
+            </div>
+            <div class="education-item">
+                <h3>Senior Secondary (CBSE)</h3>
+                <p>The Khaitan School</p>
+                <p>Percentage: 85.2%</p>
+                <p>2020</p>
+            </div>
+            <div class="education-item">
+                <h3>Secondary (CBSE)</h3>
+                <p>The Khaitan School</p>
+                <p>Percentage: 91.4%</p>
+                <p>2018</p>
+            </div>
+        </section>
+
+        <section id="experience" class="section">
+            <h2 class="section-title">Experience</h2>
+            <div class="experience-item">
+                <h3>Intern Data Scientist</h3>
+                <p>Valiance Solutions</p>
+                <p>Jan 2024 - Present</p>
+                <ul>
+                    <li>Secured a callback for collaboration based on the excellent performance during sophomore summer internship.</li>
+                    <li>Adapted quickly to the workplace, finished the proof of concept within the first week of joining.</li>
+                    <li>Extracted 8-10 facial and ocular features to develop an accurate model for neonatal jaundice detection.</li>
+                    <li>Implemented advanced CV techniques to obtain test accuracy of 89%, currently scaling the project on GCP.</li>
+                </ul>
+            </div>
+            <div class="experience-item">
+                <h3>Undergraduate Researcher</h3>
+                <p>BITS Pilani</p>
+                <p>Sept 2022 - Dec 2023</p>
+                <ul>
+                    <li>Conducted extensive research in Deep Learning, Digital Image Processing, Computer Vision, HCI and GANs.</li>
+                    <li>Completed 4 enterprise level projects in teams of professors and peers at the Intelligent Computing Lab.</li>
+                    <li>Currently seeking opportunities to disseminate findings within the research community as we are in final stages of publishing our research.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="projects" class="section">
+            <h2 class="section-title">Projects</h2>
+            <div class="project-item">
+                <h3>Sign Language Generation</h3>
+                <p>Dr. Ellakiya R.</p>
+                <p>Aug. 2023 - Dec. 2023</p>
+                <ul>
+                    <li>Lead the project focused on generating real-time 3D pose ASL using an advancing multi-modal system.</li>
+                    <li>Integrated 96.7% accurate speech emotion recognition (SER) model for 8 emotions through the utilization of audio data.</li>
+                    <li>Synthesize 2000 sign language gestures from spoken language, contributing to improved accessibility and communication for the hearing-impaired while optimizing the system with frugal innovations.</li>
+                </ul>
+            </div>
+            <div class="project-item">
+                <h3>Fundus Image Processing using ViT</h3>
+                <p>Dr. M. B. Srinivas</p>
+                <p>Aug. 2023 - Dec. 2023</p>
+                <ul>
+                    <li>Analyzed and leveraged 4500 high-resolution retinal images, capturing various disease stages, to identify key biomarkers for early detection, resulting in a 15% increase in accuracy of diagnosis.</li>
+                    <li>Enhanced medical imaging software to identify subtle features imperceptible to the human eye, resulting in a groundbreaking 99.2% disease detection rate across all stages, significantly improving patient outcomes.</li>
+                    <li>Rooted in a solid theoretical understanding of ophthalmology, our research establishes 5 key features in impactful investigations and introduces novel approaches to prevent permanent blindness.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="links" class="section">
+            <h2 class="section-title">Connect with Me</h2>
+            <ul class="link-list">
+                <li><a href="https://www.linkedin.com/in/kartikya-gupta-b8b392200/" target="_blank">LinkedIn</a></li>
+                <li><a href="https://github.com/gkartikya5" target="_blank">GitHub</a></li>
+                <li><a href="https://leetcode.com/gkartikya5/" target="_blank">LeetCode</a></li>
+                <li><a href="https://codeforces.com/profile/gkartikya5" target="_blank">Codeforces</a></li>
             </ul>
         </section>
 
-        <section id="projects">
-            <h2>Projects</h2>
-            <ul>
-                <li>
-                    <h3>Sign Language Generation</h3>
-                    <p>Lead the project focused on generating real-time 3D pose ASL using an advancing multi-modal system.</p>
-                </li>
-                <li>
-                    <h3>Fundus Image Processing using ViT</h3>
-                    <p>Analyzed and leveraged 4500 high-resolution retinal images, capturing various disease stages, to identify key biomarkers for early detection, resulting in a 15% increase in accuracy of diagnosis.</p>
-                </li>
-            </ul>
-        </section>
-
-        <section id="resume-request">
-            <h2>Request Resume</h2>
+        <section id="resume-request" class="section">
+            <h2 class="section-title">Request Resume</h2>
             <form id="resume-form">
                 <label for="name">Name:</label>
                 <input type="text" id="name" name="name" required>
