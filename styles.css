@@ -48,3 +48,47 @@ footer {
     padding: 20px;
     text-align: center;
 }
+
+/* Form Styles */
+form {
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+form label {
+    margin-top: 10px;
+}
+
+form input,
+form button {
+    margin-top: 5px;
+    padding: 5px;
+}
+
+form button {
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+#form-message {
+    margin-top: 10px;
+    text-align: center;
+    font-weight: bold;
+}
+
+/* Sticky Navigation */
+header.sticky {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 999;
+}
+
+/* Active Navigation Link */
+nav ul li a.active {
+    font-weight: bold;
+    text-decoration: underline;
+}
