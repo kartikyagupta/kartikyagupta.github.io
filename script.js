@@ -51,7 +51,7 @@ resumeForm.addEventListener('submit', function(e) {
 
     // Send form data to your email
     const formData = `Name: ${name}\nEmail: ${email}`;
-    const mailtoLink = `mailto:your-email@example.com?subject=Resume Request&body=${encodeURIComponent(formData)}`;
+    const mailtoLink = `mailto:gkartikya5@gmail.com?subject=Resume Request&body=${encodeURIComponent(formData)}`;
     window.open(mailtoLink);
 
     formMessage.textContent = `Thank you, ${name}! Your resume request has been sent.`;
