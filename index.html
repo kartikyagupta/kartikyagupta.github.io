@@ -13,7 +13,8 @@
             <ul>
                 <li><a href="#profile">Profile</a></li>
                 <li><a href="#links">Links</a></li>
-                <li><a href="#resume">Resume</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#resume-request">Request Resume</a></li>
             </ul>
         </nav>
     </header>
@@ -28,16 +29,39 @@
         <section id="links">
             <h2>Connect with Me</h2>
             <ul>
-                <li><a href="https://www.linkedin.com/in/kartikyagupta/" target="_blank">LinkedIn</a></li>
-                <li><a href="https://github.com/kartikyagupta" target="_blank">GitHub</a></li>
-                <li><a href="https://leetcode.com/kartikyagupta/" target="_blank">LeetCode</a></li>
-                <li><a href="https://codeforces.com/profile/kartikyagupta" target="_blank">Codeforces</a></li>
+                <li><a href="https://www.linkedin.com/in/kartikya-gupta-b8b392200/" target="_blank">LinkedIn</a></li>
+                <li><a href="https://github.com/gkartikya5" target="_blank">GitHub</a></li>
+                <li><a href="https://leetcode.com/gkartikya5/" target="_blank">LeetCode</a></li>
+                <li><a href="https://codeforces.com/profile/gkartikya5" target="_blank">Codeforces</a></li>
             </ul>
         </section>
 
-        <section id="resume">
-            <h2>Resume</h2>
-            <embed src="resume.pdf" type="application/pdf" width="100%" height="600px" />
+        <section id="projects">
+            <h2>Projects</h2>
+            <ul>
+                <li>
+                    <h3>Sign Language Generation</h3>
+                    <p>Lead the project focused on generating real-time 3D pose ASL using an advancing multi-modal system.</p>
+                </li>
+                <li>
+                    <h3>Fundus Image Processing using ViT</h3>
+                    <p>Analyzed and leveraged 4500 high-resolution retinal images, capturing various disease stages, to identify key biomarkers for early detection, resulting in a 15% increase in accuracy of diagnosis.</p>
+                </li>
+            </ul>
+        </section>
+
+        <section id="resume-request">
+            <h2>Request Resume</h2>
+            <form id="resume-form">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <button type="submit">Submit</button>
+            </form>
+            <p id="form-message"></p>
         </section>
     </main>
 
