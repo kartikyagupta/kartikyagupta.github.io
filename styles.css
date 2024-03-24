@@ -73,7 +73,7 @@ h2 {
 /* Add styles for education and experience sections */
 .education-info, .experience-info {
     display: flex;
-    align-items: center;
+    align-items: left;
 }
 
 .university-logo img, .company-logo img {
@@ -87,7 +87,7 @@ h2 {
     flex-grow: 1;
     display: flex; /* Add flex display */
     justify-content: space-between; /* Align items to the start and end of the container */
-    align-items: center; /* Align items vertically */
+    align-items: left; /* Align items vertically */
 }
 
 .year {
