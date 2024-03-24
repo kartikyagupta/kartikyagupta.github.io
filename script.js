@@ -9,6 +9,12 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
+// Sticky Navigation
+window.addEventListener('scroll', function() {
+    const header = document.querySelector('header');
+    header.classList.toggle('sticky', window.scrollY > 0);
+});
+
 // Add Active Class to Navigation Links
 const sections = document.querySelectorAll('section');
 const navLinks = document.querySelectorAll('nav ul li a');
@@ -31,23 +37,4 @@ window.addEventListener('scroll', function() {
             link.classList.add('active');
         }
     });
-});
-
-// Resume Request Form
-const resumeForm = document.getElementById('resume-form');
-const formMessage = document.getElementById('form-message');
-
-resumeForm.addEventListener('submit', function(e) {
-    e.preventDefault();
-
-    const name = document.getElementById('name').value;
-    const email = document.getElementById('email').value;
-
-    // Send form data to your email
-    const formData = `Name: ${name}\nEmail: ${email}`;
-    const mailtoLink = `mailto:your-email@example.com?subject=Resume Request&body=${encodeURIComponent(formData)}`;
-    window.open(mailtoLink);
-
-    formMessage.textContent = `Thank you, ${name}! Your resume request has been sent.`;
-    resumeForm.reset();
 });
