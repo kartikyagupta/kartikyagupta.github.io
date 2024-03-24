@@ -1,204 +1,50 @@
-/* General Styles */
 body {
-    font-family: 'Lato', sans-serif;
+    font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f8f8f8;
-    color: #333;
 }
 
-/* Header */
 header {
     background-color: #333;
     color: #fff;
     padding: 20px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    position: sticky;
-    top: 0;
-    z-index: 999;
+    text-align: center;
 }
 
 nav ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
-    display: flex;
 }
 
 nav ul li {
+    display: inline-block;
     margin-right: 20px;
 }
 
 nav ul li a {
     color: #fff;
     text-decoration: none;
-    font-weight: bold;
-    transition: color 0.3s ease;
 }
 
-nav ul li a:hover {
-    color: #ccc;
-}
-
-.logo a {
-    font-size: 24px;
-    font-weight: bold;
-    color: #fff;
-    text-decoration: none;
-}
-
-/* Hero Section */
-.hero {
-    background-color: #333;
-    color: #fff;
-    padding: 80px 20px;
-    text-align: center;
-}
-
-.hero-content {
+main {
     max-width: 800px;
     margin: 0 auto;
-}
-
-.hero-content img {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    object-fit: cover;
-    margin-bottom: 20px;
-}
-
-.hero-content h1 {
-    font-family: 'Merriweather', serif;
-    font-size: 36px;
-    margin-bottom: 10px;
-}
-
-.hero-content p {
-    font-size: 18px;
-}
-
-/* Section Styles */
-.section {
-    max-width: 800px;
-    margin: 40px auto;
     padding: 20px;
-    background-color: #fff;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    border-radius: 4px;
 }
 
-.section-title {
-    font-family: 'Merriweather', serif;
-    font-size: 24px;
-    color: #333;
-    margin-bottom: 20px;
-    text-align: center;
+section {
+    margin-bottom: 40px;
 }
 
-.education-item,
-.experience-item,
-.project-item {
-    margin-bottom: 30px;
+img {
+    max-width: 200px;
+    border-radius: 50%;
 }
 
-.education-item h3,
-.experience-item h3,
-.project-item h3 {
-    font-size: 18px;
-    color: #333;
-    margin-bottom: 5px;
-}
-
-.education-item p,
-.experience-item p,
-.project-item p {
-    margin: 5px 0;
-}
-
-.experience-item ul,
-.project-item ul {
-    margin-top: 10px;
-    padding-left: 20px;
-}
-
-.link-list {
-    list-style-type: none;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-}
-
-.link-list li {
-    margin: 10px;
-}
-
-.link-list li a {
-    display: inline-block;
-    padding: 10px 20px;
-    background-color: #333;
-    color: #fff;
-    text-decoration: none;
-    border-radius: 4px;
-    transition: background-color 0.3s ease;
-}
-
-.link-list li a:hover {
-    background-color: #555;
-}
-
-/* Form Styles */
-form {
-    display: flex;
-    flex-direction: column;
-    max-width: 400px;
-    margin: 0 auto;
-}
-
-form label {
-    margin-top: 10px;
-}
-
-form input,
-form button {
-    margin-top: 5px;
-    padding: 10px;
-    border-radius: 4px;
-    border: 1px solid #ccc;
-    font-size: 16px;
-}
-
-form button {
-    margin-top: 10px;
-    cursor: pointer;
-    background-color: #333;
-    color: #fff;
-    transition: background-color 0.3s ease;
-}
-
-form button:hover {
-    background-color: #555;
-}
-
-#form-message {
-    margin-top: 10px;
-    text-align: center;
-    font-weight: bold;
-}
-
-/* Footer */
 footer {
     background-color: #333;
     color: #fff;
     padding: 20px;
     text-align: center;
-}
-
-/* Active Navigation Link */
-nav ul li a.active {
-    color: #ccc;
-    text-decoration: underline;
 }
