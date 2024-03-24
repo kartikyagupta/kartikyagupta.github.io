@@ -70,25 +70,29 @@ h2 {
     color: #007bff; /* Changed highlight color */
 }
 
-/* Education and Experience section styles */
+/* Add styles for education and experience sections */
 .education-info, .experience-info {
     display: flex;
-    align-items: center; /* Vertically center items */
+    align-items: center;
 }
 
 .university-logo img, .company-logo img {
-    width: 80px; /* Adjust logo size as needed */
-    height: 80px; /* Adjust logo size as needed */
-    border-radius: 50%; /* Makes the logo image circular */
-    margin-right: 20px; /* Added margin for spacing */
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin-right: 20px;
 }
 
 .education-details, .experience-details {
-    flex-grow: 1; /* Allows details to expand to fill remaining space */
+    flex-grow: 1;
+    display: flex; /* Add flex display */
+    justify-content: space-between; /* Align items to the start and end of the container */
+    align-items: center; /* Align items vertically */
 }
 
 .year {
-    margin-left: 10px; /* Adjust spacing between university/company name and year */
+    margin-left: 10px;
+    text-align: right; /* Align year to the right */
 }
 
 /* Form styles */
