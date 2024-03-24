@@ -35,9 +35,9 @@ header {
 }
 
 .profile-picture {
-    width: 350px;
-    height: 350px;
-/*     border-radius: 50%; /* Makes the profile picture circular */ */
+    width: 150px;
+    height: 150px;
+    border-radius: 50%; /* Makes the profile picture circular */
     border: 2px solid #333; /* Changed border color */
     object-fit: cover;
     margin-right: 20px; /* Added margin for spacing */
