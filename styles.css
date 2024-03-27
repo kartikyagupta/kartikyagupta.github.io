@@ -1,7 +1,7 @@
 /* Global styles */
 body {
     font-family: 'Tahoma', sans-serif;
-    background-color: ##ffffff; /* Changed background color*/
+    background-color: #ffffe0; /* Changed background color*/
     color: #333; /* Changed text color */
     margin: 0;
     padding: 0;
@@ -143,7 +143,7 @@ button[type="submit"]:hover {
 
 /* Footer styles */
 footer {
-    background-color: #ffffff;
+    background-color: #ffffe0;
     padding: 20px;
     text-align: center;
     margin-top: 40px; /* Added margin top for spacing */
