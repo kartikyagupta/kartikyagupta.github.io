@@ -1,1 +1,3 @@
-My webpage: [https://kartikyagupta.github.io/](kartikyagupta.github.io)
+[My webpage](kartikyagupta.github.io)
+
+Open to any suggestions. Claude can't help any further (right now).😁😁
