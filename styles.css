@@ -1,7 +1,7 @@
 /* Global styles */
 body {
     font-family: 'Tahoma', sans-serif;
-    background-color: #ffffff; /* Changed background color*/
+    background-color: #ffffe0; /* Changed background color*/
     color: #333; /* Changed text color */
     margin: 0;
     padding: 0;
@@ -49,7 +49,7 @@ header {
 
 .socials a {
     margin-right: 10px;
-    color: #1454cc;
+    color: #ff0000;
     font-weight: bold;
 }
 
