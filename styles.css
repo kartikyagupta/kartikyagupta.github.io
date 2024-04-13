@@ -76,6 +76,7 @@ h2 {
 .education-info, .experience-info {
     display: flex;
     align-items: left;
+    margin-top: 1em;
 }
 
 .university-logo img, .company-logo img {
