@@ -12,8 +12,8 @@ h1, h2, h3 {
 }
 
 a {
-    color: #007bff; /* Changed link color */
-    text-decoration: none;
+    color: black; /* Changed link color */
+    text-decoration: underline;
 }
 
 a:hover {
@@ -75,7 +75,8 @@ h2 {
 /* Add styles for education and experience sections */
 .education-info, .experience-info {
     display: flex;
-    align-items: left;
+    align-items: center;
+    margin-top: 1em;
 }
 
 .university-logo img, .company-logo img {
