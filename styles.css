@@ -49,7 +49,7 @@ header {
 
 .socials a {
     margin-right: 10px;
-    color: #91a4c3;
+    color: #91bdc3;
     font-weight: bold;
 }
 
@@ -69,7 +69,7 @@ h2 {
 }
 
 .highlight {
-    color: #91a4c3; /* Changed highlight color */
+    color: #91bdc3; /* Changed highlight color */
 }
 
 /* Add styles for education and experience sections */
