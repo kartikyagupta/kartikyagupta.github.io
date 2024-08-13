@@ -1,7 +1,7 @@
 /* Global styles */
 body {
     font-family: 'Seravek', Seravek;
-    background-color: #f3f4e5; /* Changed background color*/
+    background-color: #c3b091; /* Changed background color*/
     color: #333; /* Changed text color */
     margin: 0;
     padding: 0;
@@ -22,7 +22,7 @@ a:hover {
 
 /* Header styles */
 header {
-    background-color: #f3f4e5;
+    background-color: #c3b091;
     padding: 20px;
     text-align: center;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Added box shadow */
@@ -49,7 +49,7 @@ header {
 
 .socials a {
     margin-right: 10px;
-    color: #ff0000;
+    color: #91a4c3;
     font-weight: bold;
 }
 
@@ -69,7 +69,7 @@ h2 {
 }
 
 .highlight {
-    color: #ff0000; /* Changed highlight color */
+    color: #91a4c3; /* Changed highlight color */
 }
 
 /* Add styles for education and experience sections */
@@ -144,7 +144,7 @@ button[type="submit"]:hover {
 
 /* Footer styles */
 footer {
-    background-color: #f3f4e5;
+    background-color: #c3b091;
     padding: 20px;
     text-align: center;
     margin-top: 40px; /* Added margin top for spacing */
