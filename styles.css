@@ -1,8 +1,8 @@
 /* Global styles */
 body {
     font-family: 'Seravek', Seravek;
-    background-color: #c3b091; /* Changed background color*/
-    color: #333; /* Changed text color */
+    background-color: #5ea78c; /* Changed background color*/
+    color: #000; /* Changed text color */
     margin: 0;
     padding: 0;
 }
@@ -12,7 +12,7 @@ h1, h2, h3 {
 }
 
 a {
-    color: black; /* Changed link color */
+    color: #0000EE; /* Changed link color */
     text-decoration: underline;
 }
 
@@ -22,7 +22,7 @@ a:hover {
 
 /* Header styles */
 header {
-    background-color: #c3b091;
+    background-color: #5ea78c;
     padding: 20px;
     text-align: center;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Added box shadow */
@@ -49,7 +49,7 @@ header {
 
 .socials a {
     margin-right: 10px;
-    color: #3444A4;
+    color: #0000EE;
     font-weight: bold;
 }
 
@@ -65,7 +65,7 @@ section {
 }
 
 h2 {
-    color: #333; /* Changed heading color */
+    color: #000; /* Changed heading color */
 }
 
 .highlight {
@@ -144,7 +144,7 @@ button[type="submit"]:hover {
 
 /* Footer styles */
 footer {
-    background-color: #c3b091;
+    background-color: #5ea78c;
     padding: 20px;
     text-align: center;
     margin-top: 40px; /* Added margin top for spacing */
