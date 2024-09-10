@@ -3,141 +3,354 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kartikya Gupta's Homepage</title>
-    <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css?family=Tahoma" rel="stylesheet">
-    <link rel="shortcut icon" href="favicon.jpg" type="image/x-icon">
-    <script type="text/javascript"
-        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
-    </script>
-    <script type="text/javascript">
-    (function(){
-        emailjs.init({
-            publicKey: "e4O8l0izDkvqD7USn",
-        });
-    })();
-    </script>
-    <script src="script.js"></script>
+    <title>Kartikya Gupta - Portfolio</title>
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #5ea78c;
+            --secondary-color: #444;
+            --text-color: #000;
+            --background-color: #0e3768;
+            --card-background: #b0d8e3;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--background-color);
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        header {
+            background-color: var(--primary-color);
+            color: #000;
+            padding: 1.5rem 0;
+            text-align: center;
+        }
+
+        .profile-img {
+            width: 150px;
+            height: 150px;
+            border-radius: 100%;
+            margin-bottom: 0.5rem;
+        }
+
+        h1 {
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .social-links {
+            margin-top: 0.5rem;
+        }
+
+        .social-links a {
+            color: #49326d;
+            text-decoration: underline;
+            margin: 0 0.5rem;
+            transition: color 0.3s ease;
+        }
+
+        .social-links a:hover {
+            color: var(--secondary-color);
+        }
+
+        nav {
+            background-color: var(--secondary-color);
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav ul {
+            list-style-type: none;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        nav ul li {
+            margin: 0 1rem;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            color: var(--primary-color);
+        }
+
+        section {
+            padding: 0.5rem 0;
+        }
+
+        h2 {
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+            color: var(--primary-color);
+        }
+
+        .card {
+            background-color: var(--card-background);
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            padding: 1.5rem;
+            margin-bottom: 2rem;
+            transition: transform 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .experience-item, .education-item, .publication-item, .project-item, .certification-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 1.5rem;
+        }
+
+        .item-logo {
+            width: 80px;
+            height: 80px;
+            object-fit: contain;
+            margin-right: 1rem;
+            transition: transform 0.3s ease;
+            cursor: pointer;
+        }
+
+        .item-logo:hover, .item-logo:focus {
+            transform: scale(1.5);
+        }
+
+        .item-content {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .item-title {
+            font-weight: bold;
+            font-size: 1.1rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .item-subtitle {
+            color: #000;
+            margin-bottom: 0.5rem;
+        }
+
+        .item-date, .item-location {
+            font-size: 0.9rem;
+            color: #000;
+        }
+
+        footer {
+            background-color: var(--primary-color);
+            color: #000;
+            text-align: center;
+            padding: 1rem 0;
+            margin-top: 2rem;
+        }
+
+        a {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 768px) {
+            nav ul {
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                gap: 0.5rem;
+                text-align: center;
+            }
+
+            nav ul li {
+                margin: 0;
+            }
+
+            nav ul li a {
+                display: block;
+                padding: 0.5rem;
+                font-size: 0.9rem;
+            }
+
+            .experience-item, .education-item, .publication-item, .project-item, .certification-item {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .item-logo {
+                margin-bottom: 1rem;
+                align-self: center;
+            }
+        }
+    </style>
 </head>
 <body>
     <header>
-        <div class="profile-info">
-            <img src="profile.jpg" alt="Profile Picture" class="profile-picture">
-            <div class="profile-details">
-                <h1>Kartikya Gupta</h1>
-                <p>Data Scientist | CSE @BITS Pilani</p>
-                <p>Email: <a href="mailto:gkartikya5@gmail.com" target="_blank">gkartikya5@gmail.com</a></p>
-                <div class="socials">
-                    <a href="https://www.linkedin.com/in/kartikyagupta" target="_blank">LinkedIn</a>
-                    <a href="https://github.com/kartikyagupta" target="_blank">GitHub</a>
-                    <a href="https://leetcode.com/u/catuska/" target="_blank">LeetCode</a>
-                    <a href="https://codeforces.com/profile/catuska" target="_blank">CodeForces</a>
-                </div>
+        <div class="container">
+            <img src="profile.jpg" alt="Kartikya Gupta" class="profile-img">
+            <h1>Kartikya Gupta</h1>
+            <p>Data Scientist | CSE @BITS Pilani</p>
+            <p>Email: <a href="mailto:gkartikya5@gmail.com">gkartikya5@gmail.com</a></p>
+            <div class="social-links">
+                <a href="https://codeforces.com/profile/catuska" target="_blank" rel="noopener noreferrer">CodeForces</a>
+                <a href="https://github.com/kartikyagupta" target="_blank" rel="noopener noreferrer">GitHub</a>
+                <a href="https://scholar.google.com/citations?user=fnpvxvIAAAAJ&hl=en&authuser=1" target="_blank" rel="noopener noreferrer">Google Scholar</a>
+                <a href="https://leetcode.com/catuska" target="_blank" rel="noopener noreferrer">LeetCode</a>
+                <a href="https://www.linkedin.com/in/kartikyagupta" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+                <a href="https://www.researchgate.net/profile/Kartikya-Gupta" target="_blank" rel="noopener noreferrer">ResearchGate</a>
             </div>
         </div>
     </header>
 
-    <main>
-        <section id="about-me">
+    <nav>
+        <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#publications">Publications</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#certifications">Certifications</a></li>
+        </ul>
+    </nav>
+
+    <main class="container">
+        <section id="about">
             <h2>About Me</h2>
-            <p>Kartikya Gupta is a <span class="highlight">Computer Science Engineering graduate from BITS Pilani</span>. He has solid professional experience, currently working as an Intern Data Scientist at Valiance Solutions. His technical skills include proficiency in <span class="highlight">C++, Python, LaTeX, SQL</span>, and various technologies and frameworks such as <span class="highlight">TensorFlow, PyTorch and OpenCV</span>. Kartikya has also worked on several high-impact projects, particularly in the fields of <span class="highlight">Computer Vision, Data Science, Deep Learning, Generative AI and Natural Language Processing</span>. Additionally, he is a <a href="https://catalog-education.oracle.com/pls/certview/sharebadge?id=39E69F106797BB94C4FC7C4237797327E324BA833D064ECADF068A8420F58330" target="_blank">2024 Oracle Generative AI Certified Professional</a>.</p>
+            <div class="card">
+                <p>Kartikya Gupta is a Computer Science Engineering graduate from BITS Pilani. He has solid professional experience, currently working as an Intern Data Scientist at Valiance Solutions. His technical skills include proficiency in C++, Python, LaTeX, and more.</p>
+            </div>
         </section>
 
         <section id="education">
             <h2>Education</h2>
-            <div class="education-info">
-                <div class="university-logo">
-                    <img src="logo.jpg" alt="University Logo">
-                </div>
-                <div class="education-details">
-                    <div>
-                        <strong>BITS Pilani</strong>
-                        <span class="year">(2020-2024)</span>
-                    </div>
-                    <div>B. E. (Hons.) Computer Science Engineering</div>
+            <div class="card education-item">
+                <img src="bits_logo.png" alt="BITS Pilani Logo" class="item-logo">
+                <div class="item-content">
+                    <div class="item-title">BITS Pilani</div>
+                    <div class="item-subtitle">Bachelor of Engineering in Computer Science</div>
+                    <div class="item-date">2020 - 2024</div>
                 </div>
             </div>
         </section>
 
         <section id="experience">
             <h2>Experience</h2>
-            <div class="experience-info">
-                <div class="company-logo">
-                    <img src="valiance.png" alt="University Logo">
-                </div>
-                <div class="experience-details">
-                    <div>
-                        <strong>Valiance Solutions</strong>
-                        <span class="year">(Jan 2024-Jun 2024)</span>
-                    </div>
-                    <div>Intern Data Scientist</div>
+            <div class="card experience-item">
+                <img src="valiance_logo.png" alt="Valiance Solutions Logo" class="item-logo">
+                <div class="item-content">
+                    <div class="item-title">Intern Data Scientist</div>
+                    <div class="item-subtitle">Valiance Solutions</div>
+                    <div class="item-date">Jan 2024 - Aug 2024</div>
+                    <div class="item-location">Noida, India</div>
+                    <ul>
+                        <li>Published paper "Smart Screening: Non-Invasive Detection of Severe Neonatal Jaundice using Computer Vision and Deep Learning" in the International Journal of Computer Applications.</li>
+                        <li>The International Journal of Computer Applications (Q2, IF:1.15, h-index:23, SJR:0.41) is a peer-reviewed journal known for publishing research on all aspects of Computer Science, Computer Engineering, and Computer Applications.</li>
+                    </ul>
                 </div>
             </div>
-
-            <div class="experience-info">
-                <div class="company-logo">
-                    <img src="logo.jpg" alt="University Logo">
-                </div>
-                <div class="experience-details">
-                    <div>
-                        <strong>BITS Pilani</strong>
-                        <span class="year">(Aug 2022-Jan 2024)</span>
-                    </div>
-                    <div>Undergraduate Student Researcher</div>
+            <div class="card experience-item">
+                <img src="bits_logo.png" alt="BITS Pilani Logo" class="item-logo">
+                <div class="item-content">
+                    <div class="item-title">Undergraduate Researcher</div>
+                    <div class="item-subtitle">BITS Pilani</div>
+                    <div class="item-date">Aug 2022 - Dec 2023</div>
+                    <div class="item-location">Dubai, UAE</div>
+                    <ul>
+                        <li>Developed deep learning algorithms on edge computing devices, leveraging GPUs and TPUs to enhance real-time processing capabilities.</li>
+                        <li>Collaborated with professors and peers on diverse research projects, gained experience in research design, data analysis, and academic writing.</li>
+                        <li>Integrated advanced computer vision and deep learning techniques to improve image and signal processing, optimizing performance in various applications.</li>
+                    </ul>
                 </div>
             </div>
         </section>
-        
+
+        <section id="publications">
+            <h2>Publications</h2>
+            <div class="card publication-item">
+                <img src="publication_image.png" alt="Publication 1 Thumbnail" class="item-logo">
+                <div class="item-content">
+                    <div class="item-title">Smart Screening: Non-Invasive Detection of Severe Neonatal Jaundice Using Computer Vision and Deep Learning</div>
+                    <div class="item-subtitle">Kartikya Gupta, Vaibhav Singh, Shailendra Singh Kathait</div>
+                    <p>International Journal of Computer Applications</p>
+                    <p>DOI: <a href="https://www.ijcaonline.org/archives/volume186/number35/transfer-learning-based-neonatal-jaundice-detection-using-mobilenet-and-efficientnet/" target="_blank" rel="noopener noreferrer">10.5120/ijca2024923924</a></p>
+                </div>
+            </div>
+        </section>
+
         <section id="projects">
             <h2>Projects</h2>
-            <ul>
-                <li>
-                    <h3>Sign Language Generation (Aug 2023 - Dec 2023)</h3>
-                    <p>– Lead the project focused on generating real-time 3D pose ASL using an advancing multi-modal system.</p>
-                    <p>– Integrated 96.7% accurate speech emotion recognition (SER) model for 8 emotions through the utilization of audio data.</p>
-                    <p>– Synthesize 2000 sign language gestures from spoken language, contributing to improved accessibility and communication for the hearing-impaired while optimizing the system with frugal innovations.</p>
-                </li>
-                <li>
-                    <h3>Fundus Image Processing using ViT (Aug 2023 - Dec 2023)</h3>
-                    <p>– Analyzed and leveraged 4500 high-resolution retinal images, capturing various disease stages, to identify key biomarkers for early detection, resulting in a 15% increase in accuracy of diagnosis.</p>
-                    <p>– Enhanced medical imaging software to identify subtle features imperceptible to the human eye, resulting in a groundbreaking 99.2% disease detection rate across all stages, significantly improving patient outcomes.</p>
-                    <p>– Rooted in a solid theoretical understanding of ophthalmology, our research establishes 5 key features in impactful investigations and introduces novel approaches to prevent permanent blindness.</p>
-                </li>
-                <li>
-                    <h3>Image Generation using GANs (Jan 2023 - Jul 2023)</h3>
-                    <p>– Developed advanced image generation models implemented using TensorFlow and Computer Vision frameworks for replicating 4K pixel resolution images.</p>
-                    <p>– Expanded the given dataset from 40 to thousands of images while maintaining a high image similarity ( 95%).</p>
-                    <p>– Achieved remarkable results due to architecture’s ability to defer mode collapse with stabilized model training to gain faster convergence.</p>
-                </li>
-            </ul>
+            <div class="card project-item">
+                <img src="retinal_project.png" alt="Retinal Disease Classification" class="item-logo">
+                <div class="item-content">
+                    <div class="item-title">Retinal Disease Classification</div>
+                    <ul>
+                        <li>Created custom GANs for image replication, increasing our dataset from a few tens to thousands of images for the task of multi-class classification.</li>
+                        <li>Implemented a custom vision transformer model for multi-class classification of retinal disease; namely four classes: normal, mild, moderate and severe.</li>
+                        <li>Model was able to identify miniscule identifiers invisible to a naked human eye, resulting in 99.2% disease detection rate across all stages.</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="card project-item">
+                <img src="sign_language_project.gif" alt="Sign Language Generation" class="item-logo">
+                <div class="item-content">
+                    <div class="item-title">Sign Language Generation</div>
+                    <ul>
+                        <li>Developed a real-time American Sign Language generation system using advanced multimodal deep learning models with a 2D character.</li>
+                        <li>Our system can yield 2000 sign language gestures from spoken language, contributing to improved accessibility and communication for the hearing-impaired.</li>
+                        <li>Integrated 96.7% accurate speech emotion recognition (SER) model for 8 emotions to increase the 2D model's expressiveness.</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="card project-item">
+                <img src="tst.png" alt="Language Style Transfer" class="item-logo">
+                <div class="item-content">
+                    <div class="item-title">Language Style Transfer</div>
+                    <ul>
+                        <li>Our NLP course involved a 24-hour challenge to develop a model capable of changing the style of any formal text to informal and humorous.</li>
+                        <li>Developed a model capable of effectively transferring language styles between formal, casual, and humorous expressions.</li>
+                        <li>Achieved the highest BLEU score in the class, securing the first position in the challenge.</li>
+                    </ul>
+                </div>
+            </div>
         </section>
 
-<!--         <section id="skills">
-            <h2>Skills</h2>
-            
-        </section> -->
-
-        <section id="contact-me">
-            <h2>Contact Me</h2>
-            <form id="contact-form">
-                <label for="name">Name:</label>
-                <input type="text" id="name" name="name" required>
-
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required>
-
-                <label for="message">Message:</label>
-                <textarea id="message" name="message" required></textarea>
-
-                <button type="submit">Submit</button>
-            </form>
-            <p id="form-message"></p>
+        <section id="certifications">
+            <h2>Certifications</h2>
+            <div class="card certification-item">
+                <img src="oci_logo.png" alt="Oracle Certification Logo" class="item-logo">
+                <div class="item-content">
+                    <div class="item-title">Oracle Cloud Infrastructure 2024 Generative AI Professional</div>
+                    <div class="item-date">Jun 2024 - Jun 2026</div>
+                    <a href="https://catalog-education.oracle.com/pls/certview/sharebadge?id=39E69F106797BB94C4FC7C4237797327E324BA833D064ECADF068A8420F58330" target="_blank" rel="noopener noreferrer">View Certification</a>
+                </div>
+            </div>
         </section>
     </main>
 
     <footer>
-        <p>&copy; Kartikya Gupta</p>
-        <p> Last updated: March 2024 🧑‍💻</p>
+        <p>&copy; Created by Kartikya Gupta. Last updated September 2024 👨‍💻</p>
     </footer>
 </body>
 </html>
