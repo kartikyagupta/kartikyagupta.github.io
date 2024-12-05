@@ -145,18 +145,19 @@
             flex: 1;
             display: flex;
             flex-direction: column;
-            justify-content: center;
         }
 
-        .item-title {
-            font-weight: bold;
-            font-size: 1.1rem;
+        .item-title, .item-subtitle {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
             margin-bottom: 0.5rem;
         }
 
-        .item-subtitle {
+        .item-title span:last-child, .item-subtitle span:last-child {
+            font-size: 0.9rem;
             color: #000;
-            margin-bottom: 0.5rem;
+            text-align: right;
         }
 
         .item-date, .item-location {
@@ -211,13 +212,13 @@
         <div class="container">
             <img src="profile.jpg" alt="Kartikya Gupta" class="profile-img">
             <h1>Kartikya Gupta</h1>
-            <p>Data Scientist | CSE @BITS Pilani</p>
+            <p>LLM @Scale AI | CSE @BITS Dubai</p>
             <p>Email: <a href="mailto:gkartikya5@gmail.com">gkartikya5@gmail.com</a></p>
             <div class="social-links">
                 <a href="https://codeforces.com/profile/catuska" target="_blank" rel="noopener noreferrer">CodeForces</a>
                 <a href="https://github.com/kartikyagupta" target="_blank" rel="noopener noreferrer">GitHub</a>
                 <a href="https://scholar.google.com/citations?user=fnpvxvIAAAAJ&hl=en&authuser=1" target="_blank" rel="noopener noreferrer">Google Scholar</a>
-                <a href="https://leetcode.com/catuska" target="_blank" rel="noopener noreferrer">LeetCode</a>
+                <a href="https://leetcode.com/kartikyagupta" target="_blank" rel="noopener noreferrer">LeetCode</a>
                 <a href="https://www.linkedin.com/in/kartikyagupta" target="_blank" rel="noopener noreferrer">LinkedIn</a>
                 <a href="https://www.researchgate.net/profile/Kartikya-Gupta" target="_blank" rel="noopener noreferrer">ResearchGate</a>
             </div>
@@ -242,15 +243,17 @@
                 <p>Kartikya Gupta is a Computer Science Engineering graduate from BITS Pilani. He has solid professional experience, currently working as an Intern Data Scientist at Valiance Solutions. His technical skills include proficiency in C++, Python, LaTeX, and more.</p>
             </div>
         </section>
-
+        
         <section id="education">
             <h2>Education</h2>
             <div class="card education-item">
                 <img src="bits_logo.png" alt="BITS Pilani Logo" class="item-logo">
                 <div class="item-content">
-                    <div class="item-title">BITS Pilani</div>
-                    <div class="item-subtitle">Bachelor of Engineering in Computer Science</div>
-                    <div class="item-date">2020 - 2024</div>
+                    <div class="item-title">
+                        <span><b>Birla Institute Of Technology and Science, Pilani</b></span>
+                        <span>2020 - 2024</span>
+                    </div>
+                    <div class="item-subtitle">Bachelor of Engineering in Computer Science Engineering</div>
                 </div>
             </div>
         </section>
@@ -258,12 +261,33 @@
         <section id="experience">
             <h2>Experience</h2>
             <div class="card experience-item">
+                <img src="scale.png" alt="Scale AI Logo" class="item-logo">
+                <div class="item-content">
+                    <div class="item-title">
+                        <span><b>LLM Engineer</b></span>
+                        <span>10/2024 - Present</span>
+                    </div>
+                    <div class="item-subtitle">
+                        <span>Scale AI</span>
+                        <span>Remote</span>
+                    </div>
+                    <ul>
+                        <li>Collaborated in training a Large Language Model (LLM) using Reinforcement Learning from Human Feedback (RLHF) to fine-tune model behavior, ensuring improved alignment with human expectations.</li>
+                        <li>Assessed factual accuracy and relevance of domain-specific content produced by AI models, improving the reliability of generated text across specific use cases.</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="card experience-item">
                 <img src="valiance_logo.png" alt="Valiance Solutions Logo" class="item-logo">
                 <div class="item-content">
-                    <div class="item-title">Intern Data Scientist</div>
-                    <div class="item-subtitle">Valiance Solutions</div>
-                    <div class="item-date">Jan 2024 - Aug 2024</div>
-                    <div class="item-location">Noida, India</div>
+                    <div class="item-title">
+                        <span><b>Intern Data Scientist</b></span>
+                        <span>01/2024 - 09/2024</span>
+                    </div>
+                    <div class="item-subtitle">
+                        <span>Valiance Solutions</span>
+                        <span>Noida, India</span>
+                    </div>
                     <ul>
                         <li>Published paper "Smart Screening: Non-Invasive Detection of Severe Neonatal Jaundice using Computer Vision and Deep Learning" in the International Journal of Computer Applications.</li>
                         <li>The International Journal of Computer Applications (Q2, IF:1.15, h-index:23, SJR:0.41) is a peer-reviewed journal known for publishing research on all aspects of Computer Science, Computer Engineering, and Computer Applications.</li>
@@ -271,19 +295,24 @@
                 </div>
             </div>
             <div class="card experience-item">
-                <img src="bits_logo.png" alt="BITS Pilani Logo" class="item-logo">
+                <img src="bits_logo.png" alt="Scale AI Logo" class="item-logo">
                 <div class="item-content">
-                    <div class="item-title">Undergraduate Researcher</div>
-                    <div class="item-subtitle">BITS Pilani</div>
-                    <div class="item-date">Aug 2022 - Dec 2023</div>
-                    <div class="item-location">Dubai, UAE</div>
+                    <div class="item-title">
+                        <span><b>Undergraduate Researcher</b></span>
+                        <span>08/2022 - 12/2023</span>
+                    </div>
+                    <div class="item-subtitle">
+                        <span>Birla Institute Of Technology and Science, Pilani</span>
+                        <span>Dubai, UAE</span>
+                    </div>
                     <ul>
-                        <li>Developed deep learning algorithms on edge computing devices, leveraging GPUs and TPUs to enhance real-time processing capabilities.</li>
-                        <li>Collaborated with professors and peers on diverse research projects, gained experience in research design, data analysis, and academic writing.</li>
-                        <li>Integrated advanced computer vision and deep learning techniques to improve image and signal processing, optimizing performance in various applications.</li>
+                        <!-- <li>Implemented deep learning algorithms on edge computing devices, leveraging GPUs and TPUs to enhance real-time processing capabilities.</li> -->
+                        <li>Worked alongside professors and colleagues on a variety of projects, developing expertise in institutional research, GPU programming, and academic writing.</li>
+                        <li>Implemented advanced computer vision and deep learning algorithms for improved image and signal processing, while optimizing the training process.</li>
                     </ul>
                 </div>
             </div>
+        </div>
         </section>
 
         <section id="publications">
@@ -291,7 +320,7 @@
             <div class="card publication-item">
                 <img src="publication_image.png" alt="Publication 1 Thumbnail" class="item-logo">
                 <div class="item-content">
-                    <div class="item-title">Smart Screening: Non-Invasive Detection of Severe Neonatal Jaundice Using Computer Vision and Deep Learning</div>
+                    <div class="item-title"><b>1. Smart Screening: Non-Invasive Detection of Severe Neonatal Jaundice Using Computer Vision and Deep Learning</b></div>
                     <div class="item-subtitle">Kartikya Gupta, Vaibhav Singh, Shailendra Singh Kathait</div>
                     <p>International Journal of Computer Applications</p>
                     <p>DOI: <a href="https://www.ijcaonline.org/archives/volume186/number35/transfer-learning-based-neonatal-jaundice-detection-using-mobilenet-and-efficientnet/" target="_blank" rel="noopener noreferrer">10.5120/ijca2024923924</a></p>
@@ -304,7 +333,7 @@
             <div class="card project-item">
                 <img src="retinal_project.png" alt="Retinal Disease Classification" class="item-logo">
                 <div class="item-content">
-                    <div class="item-title">Retinal Disease Classification</div>
+                    <div class="item-title"><b>1. Retinal Disease Classification</b></div>
                     <ul>
                         <li>Created custom GANs for image replication, increasing our dataset from a few tens to thousands of images for the task of multi-class classification.</li>
                         <li>Implemented a custom vision transformer model for multi-class classification of retinal disease; namely four classes: normal, mild, moderate and severe.</li>
@@ -315,7 +344,7 @@
             <div class="card project-item">
                 <img src="sign_language_project.gif" alt="Sign Language Generation" class="item-logo">
                 <div class="item-content">
-                    <div class="item-title">Sign Language Generation</div>
+                    <div class="item-title"><b>2. Sign Language Generation</b></div>
                     <ul>
                         <li>Developed a real-time American Sign Language generation system using advanced multimodal deep learning models with a 2D character.</li>
                         <li>Our system can yield 2000 sign language gestures from spoken language, contributing to improved accessibility and communication for the hearing-impaired.</li>
@@ -326,9 +355,9 @@
             <div class="card project-item">
                 <img src="tst.png" alt="Language Style Transfer" class="item-logo">
                 <div class="item-content">
-                    <div class="item-title">Language Style Transfer</div>
+                    <div class="item-title"><b>3. Language Style Transfer</b></div>
                     <ul>
-                        <li>Our NLP course involved a 24-hour challenge to develop a model capable of changing the style of any formal text to informal and humorous.</li>
+                        <li>Completed the project as part of the course Natural Language Processing, which involved developing a model capable of changing the style of any formal text to informal and humorous within 24 hours.</li>
                         <li>Developed a model capable of effectively transferring language styles between formal, casual, and humorous expressions.</li>
                         <li>Achieved the highest BLEU score in the class, securing the first position in the challenge.</li>
                     </ul>
@@ -341,7 +370,7 @@
             <div class="card certification-item">
                 <img src="oci_logo.png" alt="Oracle Certification Logo" class="item-logo">
                 <div class="item-content">
-                    <div class="item-title">Oracle Cloud Infrastructure 2024 Generative AI Professional</div>
+                    <div class="item-title"><b>Oracle Cloud Infrastructure 2024 Generative AI Certified Professional</b></div>
                     <div class="item-date">Jun 2024 - Jun 2026</div>
                     <a href="https://catalog-education.oracle.com/pls/certview/sharebadge?id=39E69F106797BB94C4FC7C4237797327E324BA833D064ECADF068A8420F58330" target="_blank" rel="noopener noreferrer">View Certification</a>
                 </div>
@@ -350,7 +379,7 @@
     </main>
 
     <footer>
-        <p>&copy; Created by Kartikya Gupta. Last updated September 2024 👨‍💻</p>
+        <p>&copy; Created by Kartikya Gupta. Last updated December 2024 👨‍💻</p>
     </footer>
 </body>
 </html>
