@@ -5,14 +5,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kartikya Gupta - Portfolio</title>
     <link rel="icon" href="favicon.ico" type="image/x-icon">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
         :root {
-            --primary-color: #5ea78c;
-            --secondary-color: #444;
-            --text-color: #000;
-            --background-color: #0e3768;
-            --card-background: #b0d8e3;
+            --primary-color: #3b82f6;
+            --secondary-color: #334155;
+            --accent-color: #10b981;
+            --text-color: #1e293b;
+            --background-color: #f8fafc;
+            --card-background: #ffffff;
+            --header-background: #dbeafe;
+            --nav-background: #1e293b;
+            --footer-background: #dbeafe;
+            --box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+            --border-radius: 12px;
+            --transition: all 0.3s ease;
         }
 
         * {
@@ -22,59 +29,88 @@
         }
 
         body {
-            font-family: 'Roboto', sans-serif;
-            line-height: 1.6;
+            font-family: 'Inter', sans-serif;
+            line-height: 1.7;
             color: var(--text-color);
             background-color: var(--background-color);
         }
 
         .container {
-            width: 90%;
-            max-width: 1200px;
+            width: 92%;
+            max-width: 1100px;
             margin: 0 auto;
-            padding: 0 20px;
+            padding: 0 15px;
         }
 
         header {
-            background-color: var(--primary-color);
-            color: #000;
-            padding: 1.5rem 0;
+            background-color: var(--header-background);
+            padding: 3rem 0 2rem;
             text-align: center;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+        }
+
+        .profile-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 1rem;
         }
 
         .profile-img {
             width: 150px;
             height: 150px;
-            border-radius: 100%;
-            margin-bottom: 0.1rem;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid white;
+            box-shadow: var(--box-shadow);
         }
 
         h1 {
-            font-size: 2rem;
-            margin-bottom: 0.5rem;
-        }
-
-        .social-links {
-            margin-top: 0.5rem;
-        }
-
-        .social-links a {
-            color: #0000ee;
-            text-decoration: underline;
-            margin: 0 0.5rem;
-            /* transition: color 0.3s ease; */
-        }
-
-        .social-links a:hover {
+            font-size: 2.2rem;
+            font-weight: 700;
+            margin-bottom: 0.25rem;
             color: var(--secondary-color);
         }
 
+        header p {
+            font-size: 1.1rem;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .social-links {
+            margin-top: 1rem;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .social-links a {
+            color: var(--primary-color);
+            text-decoration: none;
+            font-weight: 500;
+            transition: var(--transition);
+            display: inline-flex;
+            align-items: center;
+            padding: 0.5rem 1rem;
+            border-radius: 30px;
+            background-color: rgba(219, 234, 254, 0.5);
+        }
+
+        .social-links a:hover {
+            background-color: var(--primary-color);
+            color: white;
+            transform: translateY(-2px);
+        }
+
         nav {
-            background-color: var(--secondary-color);
-            padding: 1rem 0;
+            background-color: var(--nav-background);
+            padding: 0.75rem 0;
             position: sticky;
             top: 0;
             z-index: 1000;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
         }
 
         nav ul {
@@ -82,144 +118,288 @@
             display: flex;
             justify-content: center;
             flex-wrap: wrap;
+            gap: 0.5rem;
         }
 
         nav ul li {
-            margin: 0 1rem;
+            padding: 0.5rem;
         }
 
         nav ul li a {
             color: #fff;
             text-decoration: none;
-            font-weight: bold;
-            transition: color 0.3s ease;
+            font-weight: 500;
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+            transition: var(--transition);
         }
 
         nav ul li a:hover {
-            color: var(--primary-color);
+            background-color: rgba(255, 255, 255, 0.1);
+        }
+
+        main {
+            padding: 2rem 0;
         }
 
         section {
-            padding: 0.5rem 0;
+            padding: 2rem 0;
+            scroll-margin-top: 4rem;
         }
 
         h2 {
-            font-size: 2rem;
+            font-size: 1.8rem;
+            font-weight: 600;
             margin-bottom: 1.5rem;
             color: var(--primary-color);
+            position: relative;
+            padding-bottom: 0.5rem;
+        }
+
+        h2::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 40px;
+            height: 3px;
+            background-color: var(--accent-color);
         }
 
         .card {
             background-color: var(--card-background);
-            border-radius: 8px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            padding: 1.5rem;
-            margin-bottom: 2rem;
-            transition: transform 0.3s ease;
+            border-radius: var(--border-radius);
+            box-shadow: var(--box-shadow);
+            padding: 1.75rem;
+            margin-bottom: 1.5rem;
+            transition: var(--transition);
         }
 
         .card:hover {
-            transform: translateY(-5px);
+            transform: translateY(-4px);
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.08);
         }
 
-        .experience-item, .education-item, .publication-item, .project-item, .certification-item {
+        .flex-item {
             display: flex;
-            align-items: center;
+            gap: 1.5rem;
             margin-bottom: 1.5rem;
         }
 
         .item-logo {
-            width: 80px;
-            height: 80px;
+            width: 70px;
+            height: 70px;
             object-fit: contain;
-            margin-right: 1rem;
-            transition: transform 0.3s ease;
-            cursor: pointer;
+            transition: var(--transition);
+            border-radius: 8px;
+            background-color: white;
+            padding: 0.25rem;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
         }
 
-        .item-logo:hover, .item-logo:focus {
-            transform: scale(1.5);
+        .item-logo:hover {
+            transform: scale(1.2);
         }
 
         .item-content {
             flex: 1;
-            display: flex;
-            flex-direction: column;
         }
 
-        .item-title, .item-subtitle {
+        .item-header {
             display: flex;
             justify-content: space-between;
-            align-items: center;
+            align-items: baseline;
+            flex-wrap: wrap;
+            margin-bottom: 0.25rem;
+        }
+
+        .item-title {
+            font-weight: 600;
+            font-size: 1.1rem;
+            color: var(--secondary-color);
+        }
+
+        .item-date {
+            font-size: 0.9rem;
+            color: #64748b;
+        }
+
+        .item-subtitle {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            margin-bottom: 0.75rem;
+            color: #64748b;
+            font-size: 0.95rem;
+        }
+
+        .item-description ul {
+            padding-left: 1.2rem;
+            margin-top: 0.5rem;
+        }
+
+        .item-description li {
             margin-bottom: 0.5rem;
         }
 
-        .item-title span:last-child, .item-subtitle span:last-child {
-            font-size: 0.9rem;
-            color: #000;
-            text-align: right;
+        .item-links {
+            margin-top: 0.75rem;
         }
 
-        .item-date, .item-location {
-            font-size: 0.9rem;
-            color: #000;
+        .item-links a {
+            color: var(--primary-color);
+            text-decoration: none;
+            font-weight: 500;
+            transition: var(--transition);
         }
 
-        footer {
-            background-color: var(--primary-color);
-            color: #000;
-            text-align: center;
-            padding: 1rem 0;
-            margin-top: 2rem;
-        }
-
-        a {
+        .item-links a:hover {
+            color: var(--accent-color);
             text-decoration: underline;
         }
 
+        .skills-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.75rem;
+            margin-top: 1rem;
+        }
+
+        .skill-tag {
+            background-color: #e0f2fe;
+            color: var(--primary-color);
+            padding: 0.4rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 500;
+        }
+
+        footer {
+            background-color: var(--footer-background);
+            color: var(--secondary-color);
+            text-align: center;
+            padding: 2rem 0;
+            margin-top: 2rem;
+        }
+
+        .back-to-top {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            background-color: var(--primary-color);
+            color: white;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+            transition: var(--transition);
+        }
+
+        .back-to-top:hover {
+            background-color: var(--secondary-color);
+            transform: translateY(-3px);
+        }
+
         @media (max-width: 768px) {
-            nav ul {
-                display: grid;
-                grid-template-columns: repeat(3, 1fr);
-                gap: 0.5rem;
-                text-align: center;
-            }
-
-            nav ul li {
-                margin: 0;
-            }
-
-            nav ul li a {
-                display: block;
-                padding: 0.5rem;
-                font-size: 0.9rem;
-            }
-
-            .experience-item, .education-item, .publication-item, .project-item, .certification-item {
+            .flex-item {
                 flex-direction: column;
-                align-items: flex-start;
+                gap: 1rem;
             }
 
             .item-logo {
-                margin-bottom: 1rem;
-                align-self: center;
+                width: 60px;
+                height: 60px;
+                align-self: flex-start;
             }
+
+            .item-header, .item-subtitle {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 0.25rem;
+            }
+
+            .social-links {
+                gap: 0.5rem;
+            }
+
+            .social-links a {
+                padding: 0.4rem 0.8rem;
+                font-size: 0,9rem;
+            }
+        }
+
+        /* Dark mode toggle */
+        .theme-toggle {
+            position: fixed;
+            top: 1rem;
+            right: 1rem;
+            background-color: var(--card-background);
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            box-shadow: var(--box-shadow);
+            z-index: 1001;
+            border: none;
+        }
+
+        /* For dark mode when implemented */
+        .dark-mode {
+            --primary-color: #60a5fa;
+            --secondary-color: #cbd5e1;
+            --accent-color: #34d399;
+            --text-color: #e2e8f0;
+            --background-color: #0f172a;
+            --card-background: #1e293b;
+            --header-background: #1e293b;
+            --nav-background: #0f172a;
+            --footer-background: #1e293b;
+            --box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+        }
+
+        .progress-bar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 3px;
+            background-color: var(--accent-color);
+            z-index: 1002;
+            width: 0%;
+            transition: width 0.3s ease;
         }
     </style>
 </head>
 <body>
+    <div class="progress-bar" id="progressBar"></div>
+    <button class="theme-toggle" id="themeToggle">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+        </svg>
+    </button>
+
     <header>
         <div class="container">
-            <img src="profile.jpg" alt="Kartikya Gupta" class="profile-img">
-            <h1>Kartikya Gupta</h1>
-            <p>Data Scientist @Dozee | Prev: Scale AI, Valiance | CSE @BITS Pilani '24</p>
-            <p>Email: <a href="mailto:gkartikya5@gmail.com">gkartikya5@gmail.com</a></p>
+            <div class="profile-container">
+                <img src="profile.jpg" alt="Kartikya Gupta" class="profile-img">
+                <div>
+                    <h1>Kartikya Gupta</h1>
+                    <p>Data Scientist @Dozee | Prev: Scale AI, Valiance | CSE @BITS Pilani '24</p>
+                    <p>Email: <a href="mailto:gkartikya5@gmail.com">gkartikya5@gmail.com</a></p>
+                </div>
+            </div>
             <div class="social-links">
-                <a href="https://codeforces.com/profile/catuska" target="_blank" rel="noopener noreferrer">CodeForces</a>
+                <a href="https://www.linkedin.com/in/kartikyagupta" target="_blank" rel="noopener noreferrer">LinkedIn</a>
                 <a href="https://github.com/kartikyagupta" target="_blank" rel="noopener noreferrer">GitHub</a>
                 <a href="https://scholar.google.com/citations?user=fnpvxvIAAAAJ&hl=en&authuser=1" target="_blank" rel="noopener noreferrer">Google Scholar</a>
                 <a href="https://leetcode.com/kartikyagupta" target="_blank" rel="noopener noreferrer">LeetCode</a>
-                <a href="https://www.linkedin.com/in/kartikyagupta" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+                <a href="https://codeforces.com/profile/catuska" target="_blank" rel="noopener noreferrer">CodeForces</a>
                 <a href="https://www.researchgate.net/profile/Kartikya-Gupta" target="_blank" rel="noopener noreferrer">ResearchGate</a>
             </div>
         </div>
@@ -228,8 +408,9 @@
     <nav>
         <ul>
             <li><a href="#about">About</a></li>
-            <li><a href="#education">Education</a></li>
+            <li><a href="#skills">Skills</a></li>
             <li><a href="#experience">Experience</a></li>
+            <li><a href="#education">Education</a></li>
             <li><a href="#publications">Publications</a></li>
             <li><a href="#projects">Projects</a></li>
             <li><a href="#certifications">Certifications</a></li>
@@ -241,172 +422,320 @@
             <h2>About Me</h2>
             <div class="card">
                 <p>
-                    A <strong>research-oriented Data Scientist</strong>, Kartikya Gupta specializes in delivering impactful solutions in healthcare while exploring broader AI applications. A <strong>BITS Pilani</strong> graduate, he has extensive experience with tools like TensorFlow, PyTorch, and OpenCV.
+                    A <strong>research-oriented Data Scientist</strong>, I specialize in delivering impactful solutions in healthcare while exploring broader AI applications. A <strong>BITS Pilani</strong> graduate, I have extensive experience with tools like TensorFlow, PyTorch, and OpenCV.
                 </p>
                 <p>
-                    Currently at <strong>Dozee</strong>, he develops cutting-edge healthcare algorithms and drives research-backed optimizations. His past roles include fine-tuning LLMs at <strong>Scale AI</strong> and publishing a peer-reviewed paper during his internship at <strong>Valiance Solutions</strong>. Certified as a <strong>2024 Oracle Generative AI Professional</strong>, he is passionate about advancing AI in healthcare and beyond.
+                    Currently at <strong>Dozee</strong>, I develop cutting-edge healthcare algorithms and drive research-backed optimizations. My past roles include fine-tuning LLMs at <strong>Scale AI</strong> and publishing a peer-reviewed paper during my internship at <strong>Valiance Solutions</strong>. 
                 </p>
                 <p>
-                    Kartikya is also exploring <u>pose estimation</u> and is eager to contribute to impactful projects across all domains of AI, with a particular focus on <strong>AI for healthcare</strong>.
+                    Certified as a <strong>2024 Oracle Generative AI Professional</strong>, I am passionate about advancing AI in healthcare and beyond. I'm currently exploring <u>pose estimation</u> and eager to contribute to impactful projects across all domains of AI, with a particular focus on <strong>AI for healthcare</strong>.
                 </p>
-                
             </div>
         </section>
         
-        <section id="education">
-            <h2>Education</h2>
-            <div class="card education-item">
-                <img src="bits_logo.png" alt="BITS Pilani Logo" class="item-logo">
-                <div class="item-content">
-                    <div class="item-title">
-                        <span><b>Birla Institute Of Technology and Science, Pilani</b></span>
-                        <span>2020 - 2024</span>
+        <section id="skills">
+            <h2>Skills</h2>
+            <div class="card">
+                <div>
+                    <h3 style="margin-bottom: 0.75rem; color: var(--secondary-color);">Technical Skills</h3>
+                    <div class="skills-container">
+                        <span class="skill-tag">Python</span>
+                        <span class="skill-tag">TensorFlow</span>
+                        <span class="skill-tag">PyTorch</span>
+                        <span class="skill-tag">Computer Vision</span>
+                        <span class="skill-tag">Deep Learning</span>
+                        <span class="skill-tag">NLP</span>
+                        <span class="skill-tag">LLMs</span>
+                        <span class="skill-tag">OpenCV</span>
+                        <span class="skill-tag">RLHF</span>
+                        <span class="skill-tag">SQL</span>
+                        <span class="skill-tag">Generative AI</span>
+                        <span class="skill-tag">Data Analysis</span>
+                        <span class="skill-tag">Machine Learning</span>
                     </div>
-                    <div class="item-subtitle">B.E. (Hons.), Computer Science Engineering</div>
+                </div>
+                <div style="margin-top: 1.5rem;">
+                    <h3 style="margin-bottom: 0.75rem; color: var(--secondary-color);">Domain Knowledge</h3>
+                    <div class="skills-container">
+                        <span class="skill-tag">Healthcare AI</span>
+                        <span class="skill-tag">Medical Imaging</span>
+                        <span class="skill-tag">Pose Estimation</span>
+                        <span class="skill-tag">Signal Processing</span>
+                        <span class="skill-tag">Research</span>
+                        <span class="skill-tag">Academic Writing</span>
+                    </div>
                 </div>
             </div>
         </section>
 
         <section id="experience">
             <h2>Experience</h2>
-            <div class="card experience-item">
+            <div class="card flex-item">
                 <img src="file.png" alt="Dozee Logo" class="item-logo">
                 <div class="item-content">
-                    <div class="item-title">
-                        <span><b>Data Scientist I</b></span>
-                        <span>01/2025 - Present</span>
+                    <div class="item-header">
+                        <span class="item-title">Data Scientist I</span>
+                        <span class="item-date">Jan 2025 - Present</span>
                     </div>
                     <div class="item-subtitle">
                         <span>Dozee</span>
                         <span>Bengaluru, India</span>
                     </div>
-                    <ul>
-                        <li>Develop and optimize algorithms, pipelines, and processes to address healthcare challenges and meet business requirements. </li>
-                        <li>Generate case studies/publications from health datasets and extract feedback to enhance product and marketing functions. </li>
-                        <li>Maintain and upgrade software with the latest industry advancements to ensure optimal performance.</li>
-                    </ul>
+                    <div class="item-description">
+                        <ul>
+                            <li>Develop and optimize algorithms, pipelines, and processes to address healthcare challenges and meet business requirements.</li>
+                            <li>Generate case studies/publications from health datasets and extract feedback to enhance product and marketing functions.</li>
+                            <li>Maintain and upgrade software with the latest industry advancements to ensure optimal performance.</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
-            <div class="card experience-item">
+            <div class="card flex-item">
                 <img src="scale.png" alt="Scale AI Logo" class="item-logo">
                 <div class="item-content">
-                    <div class="item-title">
-                        <span><b>LLM Engineer</b></span>
-                        <span>10/2024 - 12/2024</span>
+                    <div class="item-header">
+                        <span class="item-title">LLM Engineer</span>
+                        <span class="item-date">Oct 2024 - Dec 2024</span>
                     </div>
                     <div class="item-subtitle">
                         <span>Scale AI</span>
                         <span>Remote</span>
                     </div>
-                    <ul>
-                        <li>Collaborated in training a Large Language Model (LLM) using Reinforcement Learning from Human Feedback (RLHF) to fine-tune model behavior, ensuring improved alignment with human expectations.</li>
-                        <li>Assessed factual accuracy and relevance of domain-specific content produced by AI models, improving the reliability of generated text across specific use cases.</li>
-                    </ul>
+                    <div class="item-description">
+                        <ul>
+                            <li>Collaborated in training a Large Language Model (LLM) using Reinforcement Learning from Human Feedback (RLHF) to fine-tune model behavior, ensuring improved alignment with human expectations.</li>
+                            <li>Assessed factual accuracy and relevance of domain-specific content produced by AI models, improving the reliability of generated text across specific use cases.</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
-            <div class="card experience-item">
+            <div class="card flex-item">
                 <img src="valiance_logo.png" alt="Valiance Solutions Logo" class="item-logo">
                 <div class="item-content">
-                    <div class="item-title">
-                        <span><b>Intern Data Scientist</b></span>
-                        <span>01/2024 - 09/2024</span>
+                    <div class="item-header">
+                        <span class="item-title">Intern Data Scientist</span>
+                        <span class="item-date">Jan 2024 - Sep 2024</span>
                     </div>
                     <div class="item-subtitle">
                         <span>Valiance Solutions</span>
                         <span>Noida, India</span>
                     </div>
-                    <ul>
-                        <li>Published paper "Smart Screening: Non-Invasive Detection of Severe Neonatal Jaundice using Computer Vision and Deep Learning" in the International Journal of Computer Applications.</li>
-                        <li>The International Journal of Computer Applications (Q2, IF:1.15, h-index:23, SJR:0.41) is a peer-reviewed journal known for publishing research on all aspects of Computer Science, Computer Engineering, and Computer Applications.</li>
-                    </ul>
+                    <div class="item-description">
+                        <ul>
+                            <li>Published paper "Smart Screening: Non-Invasive Detection of Severe Neonatal Jaundice using Computer Vision and Deep Learning" in the International Journal of Computer Applications.</li>
+                            <li>The International Journal of Computer Applications (Q2, IF:1.15, h-index:23, SJR:0.41) is a peer-reviewed journal known for publishing research on all aspects of Computer Science, Computer Engineering, and Computer Applications.</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
-            <div class="card experience-item">
-                <img src="bits_logo.png" alt="Scale AI Logo" class="item-logo">
+            <div class="card flex-item">
+                <img src="bits_logo.png" alt="BITS Pilani Logo" class="item-logo">
                 <div class="item-content">
-                    <div class="item-title">
-                        <span><b>Student Researcher</b></span>
-                        <span>08/2022 - 12/2023</span>
+                    <div class="item-header">
+                        <span class="item-title">Student Researcher</span>
+                        <span class="item-date">Aug 2022 - Dec 2023</span>
                     </div>
                     <div class="item-subtitle">
                         <span>BITS Pilani, Dubai Campus</span>
                         <span>Dubai, UAE</span>
                     </div>
-                    <ul>
-                        <!-- <li>Implemented deep learning algorithms on edge computing devices, leveraging GPUs and TPUs to enhance real-time processing capabilities.</li> -->
-                        <li>Worked alongside professors and colleagues on a variety of projects, developing expertise in institutional research, GPU programming, and academic writing.</li>
-                        <li>Implemented advanced computer vision and deep learning algorithms for improved image and signal processing, while optimizing the training process.</li>
-                    </ul>
+                    <div class="item-description">
+                        <ul>
+                            <li>Worked alongside professors and colleagues on a variety of projects, developing expertise in institutional research, GPU programming, and academic writing.</li>
+                            <li>Implemented advanced computer vision and deep learning algorithms for improved image and signal processing, while optimizing the training process.</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
-        </div>
+        </section>
+        
+        <section id="education">
+            <h2>Education</h2>
+            <div class="card flex-item">
+                <img src="bits_logo.png" alt="BITS Pilani Logo" class="item-logo">
+                <div class="item-content">
+                    <div class="item-header">
+                        <span class="item-title">Birla Institute Of Technology and Science, Pilani</span>
+                        <span class="item-date">2020 - 2024</span>
+                    </div>
+                    <div class="item-subtitle">
+                        <span>B.E. (Hons.), Computer Science Engineering</span>
+                    </div>
+                </div>
+            </div>
         </section>
 
         <section id="publications">
             <h2>Publications</h2>
-            <div class="card publication-item">
-                <img src="publication_image.png" alt="Publication 1 Thumbnail" class="item-logo">
+            <div class="card flex-item">
+                <img src="publication_image.png" alt="Publication Thumbnail" class="item-logo">
                 <div class="item-content">
-                    <div class="item-title"><b>1. Smart Screening: Non-Invasive Detection of Severe Neonatal Jaundice Using Computer Vision and Deep Learning</b></div>
-                    <div class="item-subtitle">Kartikya Gupta, Vaibhav Singh, Shailendra Singh Kathait</div>
-                    <p>International Journal of Computer Applications</p>
-                    <p>DOI: <a href="https://www.ijcaonline.org/archives/volume186/number35/transfer-learning-based-neonatal-jaundice-detection-using-mobilenet-and-efficientnet/" target="_blank" rel="noopener noreferrer">10.5120/ijca2024923924</a></p>
+                    <div class="item-header">
+                        <span class="item-title">Smart Screening: Non-Invasive Detection of Severe Neonatal Jaundice Using Computer Vision and Deep Learning</span>
+                    </div>
+                    <div class="item-subtitle">
+                        <span>Kartikya Gupta, Vaibhav Singh, Shailendra Singh Kathait</span>
+                    </div>
+                    <div class="item-description">
+                        <p>International Journal of Computer Applications</p>
+                        <div class="item-links">
+                            <a href="https://www.ijcaonline.org/archives/volume186/number35/transfer-learning-based-neonatal-jaundice-detection-using-mobilenet-and-efficientnet/" target="_blank" rel="noopener noreferrer">DOI: 10.5120/ijca2024923924</a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
 
         <section id="projects">
             <h2>Projects</h2>
-            <div class="card project-item">
+            <div class="card flex-item">
                 <img src="retinal_project.png" alt="Retinal Disease Classification" class="item-logo">
                 <div class="item-content">
-                    <div class="item-title"><b>1. Retinal Disease Classification</b></div>
-                    <ul>
-                        <li>Created custom GANs for image replication, increasing our dataset from a few tens to thousands of images for the task of multi-class classification.</li>
-                        <li>Implemented a custom vision transformer model for multi-class classification of retinal disease; namely four classes: normal, mild, moderate and severe.</li>
-                        <li>Model was able to identify miniscule identifiers invisible to a naked human eye, resulting in 99.2% disease detection rate across all stages.</li>
-                    </ul>
+                    <div class="item-header">
+                        <span class="item-title">Retinal Disease Classification</span>
+                    </div>
+                    <div class="item-description">
+                        <ul>
+                            <li>Created custom GANs for image replication, increasing our dataset from a few tens to thousands of images for the task of multi-class classification.</li>
+                            <li>Implemented a custom vision transformer model for multi-class classification of retinal disease; namely four classes: normal, mild, moderate and severe.</li>
+                            <li>Model was able to identify miniscule identifiers invisible to a naked human eye, resulting in 99.2% disease detection rate across all stages.</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
-            <div class="card project-item">
+            <div class="card flex-item">
                 <img src="sign_language_project.gif" alt="Sign Language Generation" class="item-logo">
                 <div class="item-content">
-                    <div class="item-title"><b>2. Sign Language Generation</b></div>
-                    <ul>
-                        <li>Developed a real-time American Sign Language generation system using advanced multimodal deep learning models with a 2D character.</li>
-                        <li>Our system can yield 2000 sign language gestures from spoken language, contributing to improved accessibility and communication for the hearing-impaired.</li>
-                        <li>Integrated 96.7% accurate speech emotion recognition (SER) model for 8 emotions to increase the 2D model's expressiveness.</li>
-                    </ul>
+                    <div class="item-header">
+                        <span class="item-title">Sign Language Generation</span>
+                    </div>
+                    <div class="item-description">
+                        <ul>
+                            <li>Developed a real-time American Sign Language generation system using advanced multimodal deep learning models with a 2D character.</li>
+                            <li>Our system can yield 2000 sign language gestures from spoken language, contributing to improved accessibility and communication for the hearing-impaired.</li>
+                            <li>Integrated 96.7% accurate speech emotion recognition (SER) model for 8 emotions to increase the 2D model's expressiveness.</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
-            <div class="card project-item">
+            <div class="card flex-item">
                 <img src="tst.png" alt="Language Style Transfer" class="item-logo">
                 <div class="item-content">
-                    <div class="item-title"><b>3. Language Style Transfer</b></div>
-                    <ul>
-                        <li>Completed the project as part of the course Natural Language Processing, which involved developing a model capable of changing the style of any formal text to informal and humorous within 24 hours.</li>
-                        <li>Developed a model capable of effectively transferring language styles between formal, casual, and humorous expressions.</li>
-                        <li>Achieved the highest BLEU score in the class, securing the first position in the challenge.</li>
-                    </ul>
+                    <div class="item-header">
+                        <span class="item-title">Language Style Transfer</span>
+                    </div>
+                    <div class="item-description">
+                        <ul>
+                            <li>Completed the project as part of the course Natural Language Processing, which involved developing a model capable of changing the style of any formal text to informal and humorous within 24 hours.</li>
+                            <li>Developed a model capable of effectively transferring language styles between formal, casual, and humorous expressions.</li>
+                            <li>Achieved the highest BLEU score in the class, securing the first position in the challenge.</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </section>
 
         <section id="certifications">
             <h2>Certifications</h2>
-            <div class="card certification-item">
+            <div class="card flex-item">
                 <img src="oci_logo.png" alt="Oracle Certification Logo" class="item-logo">
                 <div class="item-content">
-                    <div class="item-title"><b>Oracle Cloud Infrastructure 2024 Generative AI Certified Professional</b></div>
-                    <div class="item-date">Jun 2024 - Jun 2026</div>
-                    <a href="https://catalog-education.oracle.com/pls/certview/sharebadge?id=39E69F106797BB94C4FC7C4237797327E324BA833D064ECADF068A8420F58330" target="_blank" rel="noopener noreferrer">View Certification</a>
+                    <div class="item-header">
+                        <span class="item-title">Oracle Cloud Infrastructure 2024 Generative AI Certified Professional</span>
+                        <span class="item-date">Jun 2024 - Jun 2026</span>
+                    </div>
+                    <div class="item-links">
+                        <a href="https://catalog-education.oracle.com/pls/certview/sharebadge?id=39E69F106797BB94C4FC7C4237797327E324BA833D064ECADF068A8420F58330" target="_blank" rel="noopener noreferrer">View Certification</a>
+                    </div>
                 </div>
             </div>
         </section>
     </main>
 
     <footer>
-        <p>&copy; Created by Kartikya Gupta. Last updated December 2024 👨‍💻</p>
+        <p>&copy; 2025 Kartikya Gupta. All rights reserved.</p>
+        <p>Last updated April 2025</p>
     </footer>
+
+    <a href="#" class="back-to-top" aria-label="Back to top">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="18 15 12 9 6 15"></polyline>
+        </svg>
+    </a>
+
+    <script>
+        // Theme toggle functionality
+        const themeToggle = document.getElementById('themeToggle');
+        const body = document.body;
+        
+        // Check for saved theme preference
+        if (localStorage.getItem('theme') === 'dark') {
+            body.classList.add('dark-mode');
+            themeToggle.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="5"></circle>
+                <line x1="12" y1="1" x2="12" y2="3"></line>
+                <line x1="12" y1="21" x2="12" y2="23"></line>
+                <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                <line x1="1" y1="12" x2="3" y2="12"></line>
+                <line x1="21" y1="12" x2="23" y2="12"></line>
+                <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+            </svg>`;
+        }
+        
+        themeToggle.addEventListener('click', () => {
+            body.classList.toggle('dark-mode');
+            
+            // Update icon and save preference
+            if (body.classList.contains('dark-mode')) {
+                themeToggle.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="5"></circle>
+                    <line x1="12" y1="1" x2="12" y2="3"></line>
+                    <line x1="12" y1="21" x2="12" y2="23"></line>
+                    <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                    <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                    <line x1="1" y1="12" x2="3" y2="12"></line>
+                    <line x1="21" y1="12" x2="23" y2="12"></line>
+                    <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                    <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                </svg>`;
+                localStorage.setItem('theme', 'dark');
+            } else {
+                themeToggle.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                </svg>`;
+                localStorage.setItem('theme', 'light');
+            }
+        });
+
+        // Progress bar
+        window.addEventListener('scroll', () => {
+            const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+            const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            const scrolled = (winScroll / height) * 100;
+            document.getElementById('progressBar').style.width = scrolled + '%';
+        });
+
+        // Back to top button
+        const backToTop = document.querySelector('.back-to-top');
+        window.addEventListener('scroll', () => {
+            backToTop.style.display = window.scrollY > 300 ? 'flex' : 'none';
+        });
+
+        // Smooth scroll
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
 </body>
 </html>
